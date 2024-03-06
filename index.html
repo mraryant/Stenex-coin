@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="zxx" class="uk-background-white dark:uk-background-gray-100 dark:uk-text-gray-20 uk-dark">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STENEX</title>
+    <link rel="icon" type="image/png" href="" />
+    <link rel="stylesheet" href="./assets/css/customcss.css">
+
+    <link rel="preload" href="../assets/js/libs/uikit.min.js" as="script">
+    <link rel="preload" href="../assets/js/uikit-components.js" as="script">
+    <link rel="preload" href="../assets/js/libs/jquery.min.js" as="script">
+
+    <link rel="preload" href="../assets/js/libs/feather.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/typed.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/anime.min.js" as="script">
+    <link rel="preload" href="../assets/js/app.js" as="script">
+    <link rel="preload" href="../assets/js/helpers/data-attr-helper.js" as="script">
+
+    <link rel="preload" href="../assets/js/helpers/typed-helper.js" as="script">
+    <link rel="preload" href="../assets/js/helpers/anime-helper.js" as="script">
+
+    <!-- include styles -->
+    <script src="../assets/js/app-head.js"></script>
+    <link rel="stylesheet" href="../assets/css/theme/main.min.css">
+
+
+    <!-- faunt awosem -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- include scripts -->
+    <script src="../assets/js/libs/uikit.min.js"></script>
+    <script src="../assets/js/uikit-components.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B5JJP7FY91"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-B5JJP7FY91');
+    </script>
+    <script async type="module">
+        import { getCLS, getFCP, getFID, getLCP, getTTFB } from 'https://cdn.jsdelivr.net/npm/web-vitals@2.1.2/dist/web-vitals.js';
+        function sendToGoogleAnalytics({ name, delta, id }) {
+            gtag('event', name, {
+                event_category: 'Web Vitals',
+                event_label: id,
+                value: Math.round(name === 'CLS' ? delta * 1000 : delta),
+                non_interaction: true,
+            });
+        }
+        /* CLS FCP FID LCP TTFB */
+        getCLS(sendToGoogleAnalytics);
+        getFCP(sendToGoogleAnalytics);
+        getFID(sendToGoogleAnalytics);
+        getLCP(sendToGoogleAnalytics);
+        getTTFB(sendToGoogleAnalytics);
+    </script>
+
+</head>
+
+<body class="uni-body">
+
+    <!-- Dark/Light toggle -->
+    <!-- <div class="darkmode-trigger uk-position-bottom-right uk-position-small uk-position-fixed uk-box-shadow-large uk-radius-circle"
+        data-darkmode-toggle="">
+        <label class="switch">
+            <span class="sr-only">Dark mode toggle</span>
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+    </div> -->
+
+    <!-- Wrapper start -->
+    <div class="wrap">
+
+        <!-- Header start -->
+        <header class="uni-header uk-position-top">
+            <div class="uni-header-navbar"
+                data-uk-sticky="top: 70; show-on-up: false; animation: uk-animation-slide-top"
+                data-anime="opacity:[0, 1]; translateY:[-24, 0]; onview: true; delay: 0;">
+                <div class="uk-container">
+
+                    <nav class="uk-navbar uk-navbar-container uk-navbar-transparent" data-uk-navbar>
+                        <div class="uk-navbar-top">
+                            <div class="uk-navbar-left">
+                                <a class='uk-logo uk-navbar-item uk-h4 uk-h3@m uk-margin-remove' href='landing-01.html'>
+
+                                    <img class="uk-hidden dark:uk-visible" width="120"
+                                        src="./assets/images/stenexImage/logo1.png" alt="STENEX" loading="lazy">
+                                </a>
+                            </div>
+
+                            <div class="uk-navbar-right uk-flex-1 uk-flex-right">
+                                <ul class="uk-navbar-nav dark:uk-text-gray-10 uk-visible@m"
+                                    data-uk-scrollspy-nav="closest: li; scroll: true; offset: 80" data-uk-navbar-bound>
+                                    <li><a href="#uni_minting">About</a></li>
+                                    <li><a href="#uni_roadmap">Roadmap</a></li>
+                                    <li><a href="#uni_about">Tokenomics</a></li>
+                                    <li><a href="#uni_team">Team</a></li>
+
+                                </ul>
+                                <div class="uk-navbar-item">
+                                    <!-- header: call to actions -->
+                                    <a href="#"
+                                        class="uk-button uk-button-medium@m uk-button-default uk-button-outline uk-margin-left ">
+                                        <span>Buy Token</span>
+                                    </a>
+                                </div>
+
+                                <!-- <div class="uk-navbar-item uk-hidden@m">
+                                    <div style="margin-bottom: 15px;"
+                                        class="darkmode-trigger uk-position-bottom-right uk-position-small uk-position-fixed uk-box-shadow-large uk-radius-circle"
+                                        data-darkmode-toggle="">
+                                        <label class="switch">
+                                            <span class="sr-only">Dark mode toggle</span>
+                                            <input type="checkbox">
+                                            <span class="slider"></span>
+                                        </label>
+                                    </div>
+
+                                </div> -->
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- Header end -->
+
+        <!-- Hero start -->
+        <div id="uni_hero" class="uni-hero uk-section uk-section-xlarge uk-padding-remove-bottom uk-panel">
+            <div class="uk-position-top uk-position-z-index-negative uk-overflow-hidden uk-blend-overlay"
+                data-uk-height-viewport="">
+                <img class="uk-position-top-left uk-position-fixed uk-blur-large" style="left: -4%; top: -4%"
+                    width="500" src="./assets/images/stenexImage/gradient-circle.svg" alt="Circle">
+                <img class="uk-position-bottom-right uk-position-fixed uk-blur-large" style="right: -4%; bottom: -4%"
+                    width="500" src="./assets/images/stenexImage/gradient-circle.svg" alt="Circle">
+            </div>
+            <div class="uk-position-top uk-position-z-index-negative" data-uk-height-viewport="">
+                <!-- <div class="uk-position-cover uk-background-cover uk-opacity-10 dark:uk-hidden"
+                    data-src="../assets/images/gradient-01.png" data-uk-img></div>
+                <div class="uk-position-cover uk-background-cover uk-opacity-20 uk-hidden dark:uk-visible"
+                    data-src="../assets/images/gradient-01.png" data-uk-img></div> -->
+            </div>
+            <div class="uk-panel uk-position-z-index">
+                <div class="uk-container">
+                    <div class="uk-panel">
+                        <div class="uk-grid uk-grid-2xlarge uk-flex-middle uk-flex-between" data-uk-grid
+                            data-uk-height-viewport="offset-top: true; offset-bottom: 20;">
+                            <div class="uk-width-5-12@m">
+                                <div class="uk-panel uk-position-z-index uk-text-center uk-text-left@m"
+                                    data-anime="opacity:[0, 1]; translateY:[24, 0]; onview: true; delay: 100;">
+                                    <img class="uk-position-top-left" width="44"
+                                        src="../assets/images/objects/ethereum-01.png" alt="object"
+                                        style="top: -20%; left: 50%"
+                                        data-anime="opacity:[0, 1]; scale:[0, 1]; onview: true; delay: 400;">
+                                    <img class="uk-position-left" width="16"
+                                        src="../assets/images/objects/circle-01.png" alt="object"
+                                        style="top: 16%; left: -16%"
+                                        data-anime="opacity:[0, 1]; scale:[0, 1]; onview: true; delay: 420;">
+                                    <img class="uk-position-bottom-left" width="24"
+                                        src="../assets/images/objects/circle-03.png" alt="object"
+                                        style="bottom: -16%; left: 16%"
+                                        data-anime="opacity:[0, 1]; scale:[0, 1]; onview: true; delay: 440;">
+                                    <h2 class="uk-h2 uk-heading-d3@m uk-margin-small uk-margin@m">Empowering Crypto
+                                        Investment with STENEX</h2>
+                                    <p class="uk-text-large   uk-width-xlarge@m uk-text-muted">STENEX: Closed crypto
+                                        funds with STEN token simplify investments, bridging traditional and crypto
+                                        markets through blockchain and expert portfolio management.</p>
+                                    <a href="#"
+                                        class="uk-button uk-button-medium@m uk-button-gradient uk-margin-small-top">
+                                        <span>Download Whitepaper</span>
+                                        <i class="fa-solid fa-download"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="uk-width-6-12@m uk-flex-center">
+                                <div class="uk-panel"
+                                    data-anime="opacity:[0, 1]; translateY:[24, 0]; onview: true; delay: 200;">
+                                    <img class="uk-position-left uk-text-primary" width="44"
+                                        src="../assets/images/objects/bitcoin-01.png" alt="object"
+                                        style="top: 75%; left: -20%" data-uk-svg=""
+                                        data-anime="opacity:[0, 1]; scale:[0, 1]; onview: true; delay: 460;">
+                                    <img class="uk-position-right" width="28" src="../assets/images/objects/x.png"
+                                        alt="object" style="top: -4%; right: 16%" data-uk-svg=""
+                                        data-anime="opacity:[0, 1]; scale:[0, 1]; onview: true; delay: 480;">
+
+                                    <svg style="top: -20%" class="uk-position-right uk-opacity-30" viewBox="0 0 200 200"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#F796FF"
+                                            d="M47.5,-67.2C55.9,-59.3,53.2,-37.9,56.7,-20.1C60.2,-2.3,69.9,11.8,70.8,27.3C71.7,42.9,63.8,59.9,50.6,64.4C37.3,68.9,18.6,60.8,-0.3,61.2C-19.3,61.6,-38.6,70.7,-53.5,66.7C-68.4,62.8,-78.9,45.9,-78.8,29.5C-78.7,13.2,-67.9,-2.7,-59.8,-16.8C-51.6,-31,-46,-43.3,-36.5,-50.9C-27,-58.4,-13.5,-61.1,3,-65.2C19.6,-69.4,39.1,-75.1,47.5,-67.2Z"
+                                            transform="translate(100 100)">
+                                    </svg>
+                                    <div class="uk-grid uk-grid-xsmall uk-child-width-1-2"
+                                        data-uk-grid="masonry: true;">
+                                        <div>
+                                            <div
+                                                class="uni-item uk-card uk-overflow-hidden uk-radius uk-radius-large@m uk-box-shadow-hover-medium uk-visible-toggle uk-transition-toggle uk-box-shadow-medium uk-background-white dark:uk-background-white-5">
+                                                <div
+                                                    class="uni-item-featured-image uk-panel uk-flex-middle uk-flex-center">
+                                                    <div class="uk-panel uk-image-middle">
+                                                        <img src="./assets/images/stenexImage/hero1.jpg" alt="Artwork"
+                                                            class="uk-radius-small uk-radius-large@m">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="uk-margin-large-top">
+                                            <div
+                                                class="uni-item uk-card uk-overflow-hidden uk-radius uk-radius-large@m uk-box-shadow-hover-medium uk-visible-toggle uk-transition-toggle uk-box-shadow-medium uk-background-white dark:uk-background-white-5">
+                                                <div
+                                                    class="uni-item-featured-image uk-panel uk-flex-middle uk-flex-center">
+                                                    <div class="uk-panel uk-image-middle">
+                                                        <img src="./assets/images/stenexImage/hero2.jpg" alt="Artwork"
+                                                            class="uk-radius-small uk-radius-large@m">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="uni-circle-text uk-background-white dark:uk-background-gray-80 uk-box-shadow-large uk-visible@m"
+                                        href="#view_in_opensea">
+                                        <svg class="uni-circle-text-path uk-text-secondary uni-animation-spin"
+                                            viewBox="0 0 100 100" width="120" height="120">
+                                            <defs>
+                                                <path id="circle"
+                                                    d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0">
+                                            </defs>
+                                            <text font-size="11.75">
+                                                <textPath xlink:href="#circle">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+                                                </textPath>
+                                            </text>
+                                        </svg>
+                                        <img src="./assets/images/404-dark.png"
+                                            class="uk-position-center uk-text-secondary uk-icon-2xlarge unicon-arrow-up-right uk-text-bold">
+                                        </img>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero end -->
+
+        <!-- brands start -->
+        <div class="uni-brands uk-padding-3xlarge-top uk-padding-medium-bottom uk-padding-remove-top@m uk-padding-xlarge-bottom@m uk-panel uk-overflow-hidden"
+            data-anime="opacity:[0, 1]; translateY:[24, 0]; onview: true; delay: 300;">
+            <div class="uk-container uk-container-small">
+                <div class="uk-panel uk-text-center dark:uk-text-white">
+                    <header class="uk-panel uk-flex-center uk-flex-middle uk-text-center">
+                        <span class="uk-text-overline uk-text-bold uk-text-muted">Our Partners </span>
+                    </header>
+                    <div class="uk-grid uk-grid-xlarge@m uk-child-width-1-2 uk-child-width-expand@m uk-flex-middle uk-flex-center uk-grid uk-margin-medium-top"
+                        data-uk-grid>
+                        <div><img class="uk-width-xsmall" src="./assets/images/wallet-01.svg" alt="Metamask"
+                                data-uk-svg></div>
+                        <div><img class="uk-width-xsmall" src="./assets/images/wallet-02.svg" alt="BitGo" data-uk-svg>
+                        </div>
+                        <div><img class="uk-width-xsmall" src="./assets/images/wallet-03.svg" alt="Coinbase"
+                                data-uk-svg></div>
+                        <div><img class="uk-width-xsmall" src="./assets/images/wallet-04.svg" alt="Trust Wallet"
+                                data-uk-svg></div>
+                        <div><img class="uk-width-xsmall" src="./assets/images/wallet-05.svg" alt="Exodus" data-uk-svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- brands end -->
+
+        <img class="uk-width-2xsmall uk-flex-center uk-margin-auto uk-margin-medium uk-margin-large@m"
+            src="./assets/images/stenexImage/divider-01.svg" alt="Divider"
+            data-anime="opacity:[0, 1]; translateY:[-24, 0]; onview: true; delay: 100;">
+
+
+        <!-- usecase start -->
+        <div id="uni_faq"
+            class="uni-faq uk-section uk-section-large@m uk-panel uk-overflow-hidden uk-padding-2xlarge-bottom@m">
+            <div class="uk-container">
+                <header
+                    class="uk-grid-xsmall uk-flex-center uk-flex-middle uk-text-center uk-child-width-auto@m uk-grid"
+                    data-uk-grid>
+                    <div class="uk-panel">
+                        <h2 class="uk-h3 uk-h1@m uk-text-uppercase">
+                            Usecase <br class="uk-visible@m">
+                            <span class="uk-text-gradient">STENEX</span>
+                        </h2>
+                    </div>
+                </header>
+                <div class="uk-panel uk-margin-medium-top uk-margin-2xlarge-top@m">
+                    <div class="uk-grid uk-grid-3xlarge@m uk-flex-middle uk-child-width-1-2@m" data-uk-grid="">
+                        <div>
+                            <ul class="uk-card uk-card-small uk-card-medium@m uk-card-border uk-width-2xlarge@m uk-margin-auto uk-box-shadow-xsmall uk-radius-medium uk-radius-large@m dark:uk-background-white-5"
+                                data-uk-accordion="collapsible: false">
+                                <li>
+                                    <a class="uk-accordion-title uk-h5@m" href="#">Access to Mutual Funds:</a>
+                                    <div class="uk-accordion-content uk-padding-small-bottom">
+                                        <p style="line-height: 5px;"
+                                            class="uk-text-small uk-text-large@m  uk-text-muted">Duis aute irure dolor
+                                            in
+                                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                            pariatur.
+                                            Excepteur sint occaecat cupidatat proident.</p>
+                                        <p class="uk-text-small uk-text-large@m uk-text-muted">Voluptate velit esse
+                                            cillum
+                                            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title uk-h5@m" href="#"> we can buy and invest </a>
+                                    <div class="uk-accordion-content uk-padding-small-bottom">
+                                        <p class="uk-text-small uk-text-large@m uk-text-muted">Ut enim ad minim veniam,
+                                            quis
+                                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. Duis
+                                            aute irure dolor reprehenderit.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title uk-h5@m" href="#"> we should choose STENX </a>
+                                    <div class="uk-accordion-content uk-padding-small-bottom">
+                                        <p class="uk-text-small uk-text-large@m uk-text-muted">Duis aute irure dolor in
+                                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                            pariatur.
+                                            Excepteur sint occaecat cupidatat proident.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title uk-h5@m" href="#"> we can buy and </a>
+                                    <div class="uk-accordion-content uk-padding-small-bottom">
+                                        <p class="uk-text-small uk-text-large@m uk-text-muted">Ut enim ad minim veniam,
+                                            quis
+                                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. Duis
+                                            aute irure dolor reprehenderit.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title uk-h5@m" href="#">How secure is this token?</a>
+                                    <div class="uk-accordion-content uk-padding-small-bottom">
+                                        <p class="uk-text-small uk-text-large@m uk-text-muted">Duis aute irure dolor in
+                                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                            pariatur.
+                                            Excepteur sint occaecat cupidatat proident.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="uk-accordion-title uk-h5@m" href="#">What is your contract address?</a>
+                                    <div class="uk-accordion-content uk-padding-small-bottom">
+                                        <p class="uk-text-small uk-text-large@m uk-text-muted">Ut enim ad minim veniam,
+                                            quis
+                                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            consequat. Duis
+                                            aute irure dolor reprehenderit.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="uk-panel uk-image-middle uk-overflow-hidden">
+                                <img class="uk-width-small uk-width-large@m"
+                                    src="./assets/images/stenexImage/usecase2.png" alt="Create your own NFT">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- usecase end -->
+
+
+        <img class="uk-width-2xsmall uk-flex-center uk-margin-auto uk-margin-medium uk-margin-large@m"
+            src="./assets/images/stenexImage/divider-01.svg" alt="Divider"
+            data-anime="opacity:[0, 1]; scale:[0, 1]; onview: true; delay: 100;">
+
+        <!-- how to buy -->
+        <div id="uni_minting" class="uni-minting uk-section uk-section-xlarge@m uk-panel">
+            <div class="uk-container uk-container-small">
+                <header class="uk-grid-xsmall uk-flex-center uk-flex-middle uk-grid" data-uk-grid
+                    data-anime="opacity:[0, 1]; translateY:[24, 0]; onview: true; delay: 200;">
+                    <div class="uk-panel uk-text-center">
+                        <h2 class="uk-h3 uk-h1@m">How To Buy</h2>
+                    </div>
+                </header>
+                <div class="uk-panel uk-margin-medium-top uk-margin-2xlarge-top@m"
+                    data-anime="opacity:[0, 1]; translateY:[24, 0]; onview: true; delay: 300;">
+                    <img class="uk-position-top-left uk-text-secondary" width="16"
+                        src="../assets/images/objects/circle-01.png" alt="Object" style="top: -16%; left: 8%">
+                    <img class="uk-position-bottom-right uk-text-primary" width="24"
+                        src="../assets/images/objects/circle-02.png" alt="Object" style="bottom: 16%; right: -8%">
+                    <img class="uk-position-bottom-left uk-text-muted" width="28" src="../assets/images/objects/x.png"
+                        alt="Object" style="bottom: 16%; left: -8%">
+                    <div class="uk-grid uk-child-width-1-2@s uk-grid-match" data-uk-grid=""
+                        data-anime="targets: > *; opacity:[0, 1]; translateY:[24, 0]; onview: -250; delay: anime.stagger(100);">
+                        <div>
+                            <div
+                                class="uk-panel uk-card uk-card-small uk-padding-large-horizontal uk-radius-medium uk-radius-large@m uk-box-shadow-xsmall dark:uk-background-white-5">
+                                <div class="uk-grid uk-grid-medium@m" data-uk-grid="">
+                                    <div class="uk-width-1-3 uk-width-1-4@m">
+                                        <img src="../assets/images/icon-01.png" alt="Icon">
+                                    </div>
+                                    <div class="uk-panel uk-width-expand">
+                                        <h3 class="uk-h5 uk-h4@m">Connect your wallet</h3>
+                                        <p>Use Trust Wallet, Metamask or any wallet to connect to the app.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div
+                                class="uk-panel uk-card uk-card-small uk-padding-large-horizontal uk-radius-medium uk-radius-large@m uk-box-shadow-xsmall dark:uk-background-white-5">
+                                <div class="uk-grid uk-grid-medium@m" data-uk-grid="">
+                                    <div class="uk-width-1-3 uk-width-1-4@m">
+                                        <img src="../assets/images/icon-02.png" alt="Icon">
+                                        <div hidden
+                                            class="uk-card uk-card-xsmall uk-radius-medium uk-background-gradient uk-flex-middle uk-flex-center uk-margin-medium-bottom@m">
+                                            <i class="uk-icon-medium uk-icon-medium@m unicon-select-window"></i>
+                                        </div>
+                                    </div>
+                                    <div class="uk-panel uk-width-expand">
+                                        <h3 class="uk-h5 uk-h4@m">Select your quantity</h3>
+                                        <p>Upload your NFTs and set a title, description and price.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div
+                                class="uk-panel uk-card uk-card-small uk-padding-large-horizontal uk-radius-medium uk-radius-large@m uk-box-shadow-xsmall dark:uk-background-white-5">
+                                <div class="uk-grid uk-grid-medium@m" data-uk-grid="">
+                                    <div class="uk-width-1-3 uk-width-1-4@m">
+                                        <img src="../assets/images/icon-03.png" alt="Icon">
+                                        <div hidden
+                                            class="uk-card uk-card-xsmall uk-radius-medium uk-background-gradient uk-flex-middle uk-flex-center uk-margin-medium-bottom@m">
+                                            <i class="uk-icon-medium uk-icon-medium@m unicon-select-window"></i>
+                                        </div>
+                                    </div>
+                                    <div class="uk-panel uk-width-expand">
+                                        <h3 class="uk-h5 uk-h4@m">Confirm transaction</h3>
+                                        <p>Earn ETH and BIT for all your NFTs that you sell on our marketplace.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div
+                                class="uk-panel uk-card uk-card-small uk-padding-large-horizontal uk-radius-medium uk-radius-large@m uk-box-shadow-xsmall dark:uk-background-white-5">
+                                <div class="uk-grid uk-grid-medium@m" data-uk-grid="">
+                                    <div class="uk-width-1-3 uk-width-1-4@m">
+                                        <img src="../assets/images/icon-04.png" alt="Icon">
+                                        <div hidden
+                                            class="uk-card uk-card-xsmall uk-radius-medium uk-background-gradient uk-flex-middle uk-flex-center uk-margin-medium-bottom@m">
+                                            <i class="uk-icon-medium uk-icon-medium@m unicon-select-window"></i>
+                                        </div>
+                                    </div>
+                                    <div class="uk-panel uk-width-expand">
+                                        <h3 class="uk-h5 uk-h4@m">Receive your NFTs</h3>
+                                        <p>Latin professor at Hampden-Sydney College in Virginia.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- how to buy -->
+
+        <img class="uk-width-2xsmall uk-flex-center uk-margin-auto uk-margin-medium uk-margin-large@m"
+            src="./assets/images/stenexImage/divider-01.svg" alt="Divider"
+            data-anime="opacity:[0, 1]; translateY:[24, 0]; onview: true; delay: 100;">
+
+
+
+        <!-- roadmap start -->
+        <div id="uni_roadmap" class="uni-roadmap uk-section uk-section-large@m uk-panel uk-overflow-hidden">
+            <div class="uk-container uk-container-small">
+                <header
+                    class="uk-grid-xsmall uk-flex-center uk-flex-middle uk-text-center uk-child-width-auto@m uk-grid"
+                    data-uk-grid>
+                    <div class="uk-panel">
+                        <h2 class="uk-h3 uk-h1@m">STENEX Roadmap</h2>
+                    </div>
+                </header>
+                <div class="uk-panel uk-margin-medium-top uk-margin-2xlarge-top@m">
+                    <div class="uk-grid-column-large uk-grid-row-collapse@m uk-grid-divider uk-child-width-1-2@m uk-text-muted uk-grid"
+                        data-uk-grid="">
+                        <div>
+                            <div
+                                class="uni-phase uk-panel uk-card uk-card-small uk-card-medium@m uk-radius uk-radius-xlarge@m uk-box-shadow-xsmall dark:uk-background-white-5">
+                                <span
+                                    class="uni-phase-progress uk-text-small uk-text-bold uk-position-top-right uk-position-small uk-text-white uk-background-gradient"><span>0</span>%</span>
+                                <div class="uk-panel">
+                                    <span class="uni-phase-count uk-text-overline uk-text-gradient">Phase 01</span>
+                                    <h3 class="uni-phase-title uk-h4 uk-h3@m uk-margin-remove-bottom">Platform
+                                        Development and Beta Testing</h3>
+                                    <p class="uni-phase-description uk-text-large@m">Quality comes first. we took our
+                                        time to
+                                        plan out everything and build our production pipeline for a good quality
+                                        artworks.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-visible@m">
+                            <canvas height="245"></canvas>
+                        </div>
+
+                        <div class="uk-visible@m">
+                            <canvas height="245"></canvas>
+                        </div>
+                        <div>
+                            <div
+                                class="uni-phase uk-panel uk-card uk-card-small uk-card-medium@m uk-radius uk-radius-xlarge@m uk-box-shadow-xsmall dark:uk-background-white-5 uni-phase-even">
+                                <span
+                                    class="uni-phase-progress uk-text-small uk-text-bold uk-position-top-right uk-position-small uk-text-white uk-background-gradient"><span>25</span>%</span>
+                                <div class="uk-panel">
+                                    <span class="uni-phase-count uk-text-overline uk-text-gradient">Phase 02</span>
+                                    <h3 class="uni-phase-title uk-h4 uk-h3@m uk-margin-remove-bottom">STEN Token Launch
+                                        and Exchange Listings</h3>
+                                    <p class="uni-phase-description uk-text-large@m">Starting the production on the
+                                        procedurally
+                                        generated planets and the smart contract for minting.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div
+                                class="uni-phase uk-panel uk-card uk-card-small uk-card-medium@m uk-radius uk-radius-xlarge@m uk-box-shadow-xsmall dark:uk-background-white-5">
+                                <span
+                                    class="uni-phase-progress uk-text-small uk-text-bold uk-position-top-right uk-position-small uk-text-white uk-background-gradient"><span>50</span>%</span>
+                                <div class="uk-panel">
+                                    <span class="uni-phase-count uk-text-overline uk-text-gradient">Phase 03</span>
+                                    <h3 class="uni-phase-title uk-h4 uk-h3@m uk-margin-remove-bottom">Rollout of First
+                                        Batch of Crypto Mutual Funds</h3>
+                                    <p class="uni-phase-description uk-text-large@m">Our most active community members
+                                        will be
+                                        able to join the whitelist so they can discover, collect and sell their NFTs.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-visible@m">
+                            <canvas height="245"></canvas>
+                        </div>
+                        <div class="uk-visible@m">
+                            <canvas height="245"></canvas>
+                        </div>
+                        <div>
+                            <div
+                                class="uni-phase uk-panel uk-card uk-card-small uk-card-medium@m uk-radius uk-radius-xlarge@m uk-box-shadow-xsmall dark:uk-background-white-5 uni-phase-even">
+                                <span
+                                    class="uni-phase-progress uk-text-small uk-text-bold uk-position-top-right uk-position-small uk-text-white uk-background-gradient"><span>75</span>%</span>
+                                <div class="uk-panel">
+                                    <span class="uni-phase-count uk-text-overline uk-text-gradient">Phase 04</span>
+                                    <h3 class="uni-phase-title uk-h4 uk-h3@m uk-margin-remove-bottom">Expansion of
+                                        Portfolio Offerings, Partnerships, and Community Growth</h3>
+                                    <p class="uni-phase-description uk-text-large@m">Per-Sale Minting is opened forr our
+                                        Whitelisted members. The price for whitelist minting will be 0.5 SOL.</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- <div>
+                            <div
+                                class="uni-phase uk-panel uk-card uk-card-small uk-card-medium@m uk-radius uk-radius-xlarge@m uk-box-shadow-xsmall dark:uk-background-white-5">
+                                <span
+                                    class="uni-phase-progress uk-text-small uk-text-bold uk-position-top-right uk-position-small uk-text-white uk-background-gradient"><span>99</span>%</span>
+                                <div class="uk-panel">
+                                    <span class="uni-phase-count uk-text-overline uk-text-gradient">Phase 05</span>
+                                    <h3 class="uni-phase-title uk-h4 uk-h3@m uk-margin-remove-bottom">New Nfts</h3>
+                                    <p class="uni-phase-description uk-text-large@m">Typesetting industry when an
+                                        unknown
+                                        printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-visible@m">
+                            <canvas height="245"></canvas>
+                        </div>
+
+
+                        <div class="uk-visible@m">
+                            <canvas height="245"></canvas>
+                        </div>
+                        <div>
+                            <div
+                                class="uni-phase uk-panel uk-card uk-card-small uk-card-medium@m uk-radius uk-radius-xlarge@m uk-box-shadow-xsmall dark:uk-background-white-5 uni-phase-even">
+                                <span
+                                    class="uni-phase-progress uk-text-small uk-text-bold uk-position-top-right uk-position-small uk-text-white uk-background-gradient"><span>100</span>%</span>
+                                <div class="uk-panel">
+                                    <span class="uni-phase-count uk-text-overline uk-text-gradient">Phase 06</span>
+                                    <h3 class="uni-phase-title uk-h4 uk-h3@m uk-margin-remove-bottom">Metaverse</h3>
+                                    <p class="uni-phase-description uk-text-large@m">A complete account of the system,
+                                        and
+                                        expound the actual teachings of the great explorer of the truth.</p>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- roadmap end -->
+
+        <img class="uk-width-2xsmall uk-flex-center uk-margin-auto uk-margin-medium uk-margin-large@m"
+            src="./assets/images/stenexImage/divider-01.svg" alt="Divider"
+            data-anime="opacity:[0, 1]; translateY:[-24, 0]; onview: true; delay: 100;">
+
+
+        <!-- tokonomics start -->
+        <div id="uni_about" class="uni-about uk-section uk-section-xlarge@m uk-panel">
+            <div class="uk-container">
+                <header class="uk-grid-xsmall uk-flex-center uk-flex-middle uk-grid" data-uk-grid>
+                    <div class="uk-panel uk-text-center">
+                        <h2 class="uk-h3 uk-h1@m">Tokenomics</h2>
+                    </div>
+                </header>
+                <div class="uk-panel uk-margin-medium-top uk-margin-2xlarge-top@m">
+                    <div class="uk-grid uk-grid-2xlarge uk-grid-3xlarge@m uk-child-width-1-1" data-uk-grid="">
+
+                        <div>
+                            <div class="uk-panel">
+                                <div class="uk-grid uk-grid-3xlarge@m uk-flex-middle uk-child-width-1-2@m"
+                                    data-uk-grid="">
+                                    <div>
+                                        <div
+                                            class="uk-panel uk-image-middle uk-overflow-hidden uk-radius uk-radius-large@m">
+                                            <img src="./assets//images/toko.png" alt="Create your own NFT">
+                                        </div>
+                                        <div>
+                                            <ul>
+                                                <li>Token Utility</li>
+                                                <li>Total Supply: 125M</li>
+                                                <li>Decimal: 18</li>
+                                                <li>Network: BEP20</li>
+
+
+
+
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="uk-flex-first@m">
+                                        <div class="uk-panel">
+                                            <span class="uk-text-overline uk-text-gradient">TOKEN</span>
+                                            <h3 class="uk-h3 uk-h1@m">Token Sale</h3>
+                                            <p class="uk-text-large@m">Tokenomics In The STENEXEcosystem Refers To The
+                                                Structure, Purpose, Distribution, And Use Of The STENEXToken Within The
+                                                Blockchain-Based Platform.</p>
+                                            <div class="uk-grid uk-grid-large@m uk-grid-match uk-child-width-1-2@m uk-margin-medium-top uk-margin-large-top@m"
+                                                data-uk-grid="">
+
+
+                                                <div class="container">
+                                                    <div class="box" style="--color: #fc5f9b">
+                                                        <div class="content">
+                                                            <div class="icon">
+                                                                <i class="fa-solid fa-people-group"></i>
+                                                            </div>
+                                                            <div class="text">
+                                                                <h3 style="margin: 0px;"> Community</h3>
+                                                                <p style="margin: 0px;">37% </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box" style="--color: #a362ea">
+                                                        <div class="content">
+                                                            <div class="icon">
+                                                                <i class="fa-solid fa-coins"></i>
+                                                            </div>
+                                                            <div class="text">
+                                                                <h3 style="margin: 0px;"> Founding</h3>
+                                                                <p style="margin: 0px;">15% </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box" style="--color: #0ed095">
+                                                        <div class="content">
+                                                            <div class="icon">
+                                                                <i class="fa-solid fa-sack-dollar"></i>
+                                                            </div>
+                                                            <div class="text">
+                                                                <h3 style="margin: 0px;"> Investors</h3>
+                                                                <p style="margin: 0px;">20%</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box" style="--color: #5bc0de">
+                                                        <div class="content">
+                                                            <div class="icon">
+                                                                <i class="fa-solid fa-user-tie"></i>
+                                                            </div>
+                                                            <div class="text">
+                                                                <h3 style="margin: 0px;"> Advisors</h3>
+                                                                <p style="margin: 0px;">10%</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box" style="--color: #f0ad4e">
+                                                        <div class="content">
+                                                            <div class="icon">
+                                                                <i class="fa-solid fa-gem"></i>
+                                                            </div>
+                                                            <div class="text">
+                                                                <h3 style="margin: 0px;"> Treasury</h3>
+                                                                <p style="margin: 0px;">10%</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box" style="--color: #0ed095">
+                                                        <div class="content">
+                                                            <div class="icon">
+                                                                <i class="fa-solid fa-ranking-star"></i>
+                                                            </div>
+                                                            <div class="text">
+                                                                <h3 style="margin: 0px;"> Marketing</h3>
+                                                                <p style="margin: 0px;">8%</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- tokonomics end -->
+
+        <img class="uk-width-2xsmall uk-flex-center uk-margin-auto uk-margin-medium uk-margin-large@m"
+            src="./assets/images/stenexImage/divider-01.svg" alt="Divider"
+            data-anime="opacity:[0, 1]; translateY:[-24, 0]; onview: true; delay: 100;">
+
+
+
+        <!-- contract addres -->
+        <div class="uni-cta uk-section uk-section-2xlarge@m uk-panel uk-overflow-hidden">
+            <img class="uk-cover uk-opacity-10" data-uk-cover src="../assets/images/collection-cta.png" alt="arrow">
+
+
+            <div class="addressmain" id="contract">
+
+                <div class="address">
+                    <span class="uk-h3 uk-h3@m">Contract Address</span>
+                    <p class="contract">0x9e3F29552c7D4651BF14bE395C68032Ef3C91901</p>
+                </div>
+
+                <div style=" display: flex; gap: 5px;" class=" ">
+
+                    <span onclick="handleCopy()"
+                        class="uk-button uk-button-medium@m uk-button-default uk-button-outline uk-margin-left "><img
+                            src="./assets/images/stenexImage/copy (1).webp"
+                            style="width: 25px; height: 25px; margin-right: 15px;" alt="" />Copy Address</span>
+                    <a href="#"
+                        class="uk-button uk-button-medium@m uk-button-default uk-button-outline uk-margin-left "><img
+                            src="./assets/images/stenexImage/bsc.webp"
+                            style="width: 25px; height: 25px; margin-right: 15px;" alt="" />BSC
+                        Scan</a>
+                </div>
+
+                <div id="popup" class="popup" style="display: none;">Copied to clipboard!</div>
+            </div>
+        </div>
+        <!-- contract addres -->
+
+        <img class="uk-width-2xsmall uk-flex-center uk-margin-auto uk-margin-medium uk-margin-large@m"
+            src="./assets/images/stenexImage/divider-01.svg" alt="Divider"
+            data-anime="opacity:[0, 1]; translateY:[24, 0]; onview: true; delay: 100;">
+    </div>
+
+    <!-- Wrapper end -->
+
+    <!-- Footer start -->
+    <footer class="uni-footer uk-section uk-section-xlarge@m">
+        <div class="uk-container">
+            <div class="uk-panel">
+                <img class="uk-position-top-left" width="32" src="../assets/images/objects/ethereum-01.png" alt="object"
+                    style="top: 32%; left: 16%">
+                <img class="uk-position-top-right" width="16" src="../assets/images/objects/x.png" alt="object"
+                    style="top: 8%; right: 16%">
+                <img class="uk-position-bottom-right" width="16" src="../assets/images/objects/circle-01.png"
+                    alt="object" style="bottom: 24%; right: 40%">
+                <img class="uk-position-bottom-left" width="24" src="../assets/images/objects/circle-03.png"
+                    alt="object" style="bottom: -8%; left: 30%">
+                <div class="uk-grid uk-flex-center uk-text-center" data-uk-grid>
+                    <div class="uk-width-large@m">
+                        <div class="uk-panel">
+                            <a class='uk-logo' href='landing-01.html'>
+                                <img width="200" src="./assets//images/stenexImage/logo1.png" alt="STENEX">
+                            </a>
+                            <p class="uk-text-xlarge@m uk-margin-medium-top@m">We make it easy to discover, Invest and
+                                manage all your NFTs at one place.</p>
+                            <ul
+                                class="uk-hidden dark:uk-visible uk-subnav uk-subnav-small uk-flex-center uk-text-gray-40 uk-margin-top uk-margin-medium-top@m">
+                                <li>
+                                    <a href="https://twitter.com/unistudioco"><span
+                                            class="fa-brands fa-x-twitter"></span></a>
+                                </li>
+                                <li>
+                                    <a href="https://discord.com/unistudioco"><span
+                                            class="fa-brands fa-discord"></span></a>
+                                </li>
+                                <li>
+                                    <a href="https://instagram.com/unistudioco"><span
+                                            class="fa-brands fa-instagram"></span></a>
+                                </li>
+                                <li>
+                                    <a href="https://instagram.com/unistudioco"><span
+                                            class="fa-brands fa-whatsapp"></span></a>
+                                </li>
+                                <li>
+                                    <a href="https://instagram.com/unistudioco"><span
+                                            class="fa-brands fa-facebook"></span></a>
+                                </li>
+                            </ul>
+                            <ul
+                                class=" uk-visible dark:uk-hidden uk-subnav uk-subnav-small uk-flex-center uk-text-gray-40 uk-margin-top uk-margin-medium-top@m">
+                                <li>
+                                    <a href="https://twitter.com/unistudioco">
+                                        <span style="color: black;" class="fa-brands fa-x-twitter"></span></a>
+                                </li>
+                                <li>
+                                    <a href="https://discord.com/unistudioco"><span style="color: black;"
+                                            class="fa-brands fa-discord"></span></a>
+                                </li>
+                                <li>
+                                    <a href="https://instagram.com/unistudioco"><span style="color: black;"
+                                            class="fa-brands fa-instagram"></span></a>
+                                </li>
+                                <li>
+                                    <a href="https://instagram.com/unistudioco"><span style="color: black;"
+                                            class="fa-brands fa-whatsapp"></span></a>
+                                </li>
+                                <li>
+                                    <a href="https://instagram.com/unistudioco"><span style="color: black;"
+                                            class="fa-brands fa-facebook"></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr class="uk-margin-medium uk-margin-3xlarge-top@m">
+                <div class="uk-panel uk-text-small">
+                    <div class="uk-grid uk-child-width-auto@m uk-flex-center uk-flex-between@m uk-text-center uk-text-left@m"
+                        data-uk-grid>
+                        <div>
+                            <ul class="uk-subnav uk-subnav-small uk-text-muted uk-flex-center">
+                                <li><a href='privacy.html'>Privacy policy</a></li>
+                                <li><a href='terms.html'>Terms of use</a></li>
+                                <li class="uk-margin-small-left">
+                                    <a href="#" data-uk-totop="" data-uk-scroll><i class="chevron-up"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="uk-flex-first@m uk-flex-center">
+                            <p class="uk-text-muted">© 2022 STENEX. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer end -->
+
+    <!-- include scripts -->
+    <script defer src="../assets/js/libs/jquery.min.js"></script>
+    <!-- <script defer src="../assets/js/libs/swiper-bundle.min.js"></script> -->
+    <script defer src="../assets/js/libs/feather.min.js"></script>
+    <script defer src="../assets/js/libs/typed.min.js"></script>
+    <script defer src="../assets/js/libs/anime.min.js"></script>
+    <script defer src="../assets/js/app.js"></script>
+    <script defer src="../assets/js/helpers/data-attr-helper.js"></script>
+    <!-- <script defer src="../assets/js/helpers/swiper-helper.js"></script> -->
+    <script defer src="../assets/js/helpers/typed-helper.js"></script>
+    <script defer src="../assets/js/helpers/anime-helper.js"></script>
+
+
+    <script>
+        function handleCopy() {
+            var textToCopy = '0x9e3F29552c7D4651BF14bE395C68032Ef3C91901';
+
+            navigator.clipboard.writeText(textToCopy)
+                .then(function () {
+                    document.getElementById('popup').style.display = 'block';
+                    setTimeout(function () {
+                        document.getElementById('popup').style.display = 'none';
+                    }, 2000);
+                })
+                .catch(function (err) {
+                    console.error('Copy failed: ', err);
+                });
+        }
+    </script>
+</body>
+
+</html>
