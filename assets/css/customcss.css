@@ -62,3 +62,52 @@
     font-size: 3.5vw;
   }
 }
+
+/* video */
+.video {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  display: flex;
+  position: absolute;
+
+  opacity: 0.8;
+  right: 0%;
+}
+.videolayer {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  opacity: 1;
+  right: 0%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.5887605042016807) 39%,
+    rgba(0, 0, 0, 0.8380602240896359) 77%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+.bottomshadow {
+  width: 100%;
+  object-fit: cover;
+  height: 10vh;
+  display: flex;
+  position: absolute;
+  z-index: 10;
+  bottom: -1%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #100534 65%);
+}
+.bottomshadow2 {
+  width: 100%;
+  object-fit: cover;
+  height: 10vh;
+  display: flex;
+  position: absolute;
+  z-index: 10;
+  top: 100%;
+  background: linear-gradient(360deg, rgba(255, 255, 255, 0) 0%, #100534b8 65%);
+}
