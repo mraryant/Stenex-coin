@@ -4,7 +4,6 @@
 @import url(https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Preahvihear&family=Space+Grotesk:wght@400;700&family=Inter:wght@200;400;600&display=swap);
 
-
 [class*=" unicon-"],
 [class^="unicon-"] {
   font-family: Unicons !important;
@@ -3129,8 +3128,8 @@
   --header-search-color-text-hover: var(--color-primary);
   --header-cart-color-text: inherit;
   --header-cart-color-text-hover: var(--color-primary);
-  --gradient-first: #2600fc;
-  --gradient-second: #ff00ea;
+  --gradient-first:#873DF1 ;
+  --gradient-second: #f97f22;
   --gradient-angle: 25deg;
 }
 
